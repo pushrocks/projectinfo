@@ -1,0 +1,9 @@
+/// <reference path="./typings/main.d.ts" />
+var plugins = {
+    path: require("path"),
+    Q: require("q"),
+    smartfile: require("smartfile")
+};
+module.exports = plugins;
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInByb2plY3RpbmZvLnBsdWdpbnMudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsNENBQTRDO0FBQzVDLElBQUksT0FBTyxHQUFHO0lBQ1YsSUFBSSxFQUFFLE9BQU8sQ0FBQyxNQUFNLENBQUM7SUFDckIsQ0FBQyxFQUFFLE9BQU8sQ0FBQyxHQUFHLENBQUM7SUFDZixTQUFTLEVBQUUsT0FBTyxDQUFDLFdBQVcsQ0FBQztDQUNsQyxDQUFDO0FBRUYsaUJBQVMsT0FBTyxDQUFDIiwiZmlsZSI6InByb2plY3RpbmZvLnBsdWdpbnMuanMiLCJzb3VyY2VzQ29udGVudCI6WyIvLy8gPHJlZmVyZW5jZSBwYXRoPVwiLi90eXBpbmdzL21haW4uZC50c1wiIC8+XG52YXIgcGx1Z2lucyA9IHtcbiAgICBwYXRoOiByZXF1aXJlKFwicGF0aFwiKSxcbiAgICBROiByZXF1aXJlKFwicVwiKSxcbiAgICBzbWFydGZpbGU6IHJlcXVpcmUoXCJzbWFydGZpbGVcIilcbn07XG5cbmV4cG9ydCA9IHBsdWdpbnM7Il0sInNvdXJjZVJvb3QiOiIvc291cmNlLyJ9

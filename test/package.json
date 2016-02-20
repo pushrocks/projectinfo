@@ -1,0 +1,11 @@
+{
+  "name": "testpackage",
+  "version": "1.0.0",
+  "description": "some test",
+  "main": "test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lossless GmbH",
+  "license": "MIT"
+}
