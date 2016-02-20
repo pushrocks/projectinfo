@@ -22,7 +22,14 @@ describe("projectinfo",function(){
         it("should have .name",function(){
             myNpm
                 .should.have.property("name","testpackage");
-        })
+        });
 
     });
+
+    describe(".getName()",function(){
+        it("should return a name",function(){
+            projectinfo.getName(testBasePath)
+                .should.equal("testpackage");
+        });
+    })
 });
