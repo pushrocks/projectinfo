@@ -5,6 +5,7 @@ class ProjectinfoNPM  {
     name:string;
     version:string;
     status:string;
+    license:string;
 
     constructor(cwdArg:string){
         this.packageJson = plugins.smartfile.readFileToObject(
@@ -15,6 +16,7 @@ class ProjectinfoNPM  {
         );
         this.name = this.packageJson.name;
         this.version = this.packageJson.version;
+        this.license = this.packageJson.license;
         this.status = "ok";
     }
 }

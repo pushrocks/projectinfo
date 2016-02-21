@@ -16,12 +16,17 @@ describe("projectinfo",function(){
 
         it("should have .version",function(){
             myNpm
-                .should.have.property("name","testpackage")
+                .should.have.property("version","1.0.0")
         });
 
         it("should have .name",function(){
             myNpm
                 .should.have.property("name","testpackage");
+        });
+
+        it("should have .license",function(){
+            myNpm
+                .should.have.property("license","MIT");
         });
 
     });
