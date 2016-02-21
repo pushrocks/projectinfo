@@ -1,12 +1,9 @@
 /// <reference path="./typings/main.d.ts" />
 import plugins = require("./projectinfo.plugins");
-
-//import classes
-import ProjectinfoNPM = require("./projectinfo.npm");
-
 var projectinfo:any = {};
 
-//specific classes
+//classes
+import ProjectinfoNPM = require("./projectinfo.npm");
 projectinfo.npm = function(cwdArg){
     return new ProjectinfoNPM(cwdArg);
 };
