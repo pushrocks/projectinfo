@@ -6,7 +6,7 @@ class ProjectinfoNPM  {
     version:string;
     status:string;
     license:string;
-    repoUrl:string;
+    git;
 
     constructor(cwdArg:string){
         this.packageJson = plugins.smartfile.readFileToObject(
@@ -20,11 +20,8 @@ class ProjectinfoNPM  {
         this.status = "ok";
         this.license = this.packageJson.license;
         if (this.packageJson.repository){
-            this.repoUrl = this.packageJson.repository.url;
-        } else {
-            this.repoUrl = undefined;
+            this.git = plugins.smartstring.git(this.packageJson.repository.url);
         };
-
 
     }
 }

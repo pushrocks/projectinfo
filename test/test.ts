@@ -28,6 +28,10 @@ describe("projectinfo",function(){
             myNpm
                 .should.have.property("license","MIT");
         });
+        it("should have .git",function(){
+            myNpm.git.httpsUrl
+                .should.equal("https://github.com/someuser/somerepo.git");
+        });
 
     });
 
