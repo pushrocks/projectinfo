@@ -23,7 +23,7 @@ class ProjectinfoNPM  {
             this.git = plugins.smartstring.git(this.packageJson.repository.url,optionsArg.gitAccessToken);
         };
 
-    }
+    };
 }
 
 export = ProjectinfoNPM;
