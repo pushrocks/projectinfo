@@ -8,7 +8,7 @@ class ProjectinfoNPM  {
     license:string;
     git;
 
-    constructor(cwdArg:string){
+    constructor(cwdArg:string,optionsArg:{gitAccessToken?:string} = {}){
         this.packageJson = plugins.smartfile.readFileToObject(
             plugins.path.join(
                 plugins.path.resolve(cwdArg),
@@ -20,7 +20,7 @@ class ProjectinfoNPM  {
         this.status = "ok";
         this.license = this.packageJson.license;
         if (this.packageJson.repository){
-            this.git = plugins.smartstring.git(this.packageJson.repository.url);
+            this.git = plugins.smartstring.git(this.packageJson.repository.url,optionsArg.gitAccessToken);
         };
 
     }

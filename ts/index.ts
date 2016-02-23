@@ -4,8 +4,8 @@ var projectinfo:any = {};
 
 //classes
 import ProjectinfoNPM = require("./projectinfo.npm");
-projectinfo.npm = function(cwdArg){
-    return new ProjectinfoNPM(cwdArg);
+projectinfo.npm = function(cwdArg,optionsArg){
+    return new ProjectinfoNPM(cwdArg,optionsArg);
 };
 
 //quick functions

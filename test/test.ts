@@ -6,7 +6,7 @@ var testBasePath = path.resolve(__dirname);
 
 describe("projectinfo",function(){
     describe(".npm() return",function(){
-        var myNpm = projectinfo.npm(testBasePath);
+        var myNpm = projectinfo.npm(testBasePath,{gitAccessToken:"sometoken"});
         it("should have .packageJson",function(){
             myNpm.packageJson
                .should.have.property("version","1.0.0");
@@ -30,7 +30,7 @@ describe("projectinfo",function(){
         });
         it("should have .git",function(){
             myNpm.git.httpsUrl
-                .should.equal("https://github.com/someuser/somerepo.git");
+                .should.equal("https://sometoken@github.com/someuser/somerepo.git");
         });
 
     });
