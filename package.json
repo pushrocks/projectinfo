@@ -1,6 +1,6 @@
 {
   "name": "projectinfo",
-  "version": "0.0.5",
+  "version": "1.0.0",
   "description": "gather information about projects. supports npm, git etc.",
   "main": "dist/index.js",
   "scripts": {
