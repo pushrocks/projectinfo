@@ -1,4 +1,4 @@
-/// <reference path="./typings/main.d.ts" />
+import "typings-global"
 import plugins = require("./projectinfo.plugins");
 export class ProjectinfoNpm  {
     packageJson;
