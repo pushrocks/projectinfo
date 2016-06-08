@@ -1,6 +1,6 @@
 /// <reference path="./typings/main.d.ts" />
 import plugins = require("./projectinfo.plugins");
-class ProjectinfoNPM  {
+export class ProjectinfoNpm  {
     packageJson;
     name:string;
     version:string;
@@ -25,5 +25,3 @@ class ProjectinfoNPM  {
 
     };
 }
-
-export = ProjectinfoNPM;

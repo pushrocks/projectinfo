@@ -2,10 +2,11 @@
 import plugins = require("./projectinfo.plugins");
 var projectinfo:any = {};
 
-//classes
-import ProjectinfoNPM = require("./projectinfo.npm");
-projectinfo.npm = function(cwdArg,optionsArg){
-    return new ProjectinfoNPM(cwdArg,optionsArg);
+//npm
+import {ProjectinfoNpm} from "./projectinfo.classes.npm";
+export {ProjectinfoNpm} from "./projectinfo.classes.npm";
+export let npm = function(cwdArg,optionsArg){
+    return new ProjectinfoNpm(cwdArg,optionsArg);
 };
 
 //quick functions
@@ -25,5 +26,3 @@ projectinfo.mojo = function(){
 
 };
 */
-
-export = projectinfo;
