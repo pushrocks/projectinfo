@@ -1,4 +1,4 @@
-/// <reference path="../ts/typings/main.d.ts" />
+import "typings-test";
 var projectinfo = require("../dist/index.js");
 var should = require("should");
 var path = require("path");

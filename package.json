@@ -3,6 +3,7 @@
   "version": "1.0.2",
   "description": "gather information about projects. supports npm, git etc.",
   "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "scripts": {
     "test": "(npmts)"
   },
@@ -25,7 +26,8 @@
   "homepage": "https://gitlab.com/pushrocks/projectinfo#readme",
   "devDependencies": {
     "npmts": "^5.2.5",
-    "should": "^9.0.0"
+    "should": "^9.0.0",
+    "typings-test": "^1.0.1"
   },
   "dependencies": {
     "q": "^1.4.1",

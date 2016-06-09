@@ -1,6 +1,5 @@
 import "typings-global"
 import plugins = require("./projectinfo.plugins");
-var projectinfo:any = {};
 
 //npm
 import {ProjectinfoNpm} from "./projectinfo.classes.npm";
@@ -10,8 +9,8 @@ export let npm = function(cwdArg,optionsArg){
 };
 
 //quick functions
-projectinfo.getName = function(cwdArg){
-    var localNpm = projectinfo.npm(cwdArg);
+export let getName = function(cwdArg){
+    var localNpm = new ProjectinfoNpm(cwdArg);
     if (localNpm.status === "ok"){
         return localNpm.name;
     }

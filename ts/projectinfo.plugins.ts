@@ -1,9 +1,5 @@
 import "typings-global"
-var plugins = {
-    path: require("path"),
-    Q: require("q"),
-    smartfile: require("smartfile"),
-    smartstring: require("smartstring")
-};
-
-export = plugins;
+export let path = require("path");
+export let Q =  require("q");
+export import smartfile = require("smartfile");
+export import smartstring = require("smartstring");
