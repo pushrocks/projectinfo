@@ -9,7 +9,7 @@ export class ProjectinfoNpm  {
     git;
 
     constructor(cwdArg:string,optionsArg:{gitAccessToken?:string} = {}){
-        this.packageJson = plugins.smartfile.local.toObjectSync(
+        this.packageJson = plugins.smartfile.fs.toObjectSync(
             plugins.path.join(
                 plugins.path.resolve(cwdArg),
                 "package.json"

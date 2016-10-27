@@ -25,14 +25,14 @@
   },
   "homepage": "https://gitlab.com/pushrocks/projectinfo#readme",
   "devDependencies": {
-    "npmts": "^5.2.5",
-    "should": "^9.0.0",
-    "typings-test": "^1.0.1"
+    "npmts-g": "^5.2.8",
+    "should": "^11.1.1",
+    "typings-test": "^1.0.3"
   },
   "dependencies": {
     "q": "^1.4.1",
-    "smartfile": "3.0.10",
-    "smartstring": "2.0.6",
-    "typings-global": "^1.0.3"
+    "smartfile": "4.1.0",
+    "smartstring": "2.0.17",
+    "typings-global": "^1.0.14"
   }
 }
