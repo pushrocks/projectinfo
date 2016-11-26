@@ -1,1 +1,8 @@
-import "typings-global"
+import 'typings-global'
+
+export class ProjectinfoGit {
+    isGit: boolean
+    constructor() {
+        
+    }
+}

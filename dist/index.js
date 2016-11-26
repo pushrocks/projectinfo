@@ -1,16 +1,21 @@
 "use strict";
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
 require("typings-global");
-//npm
+// direct access to classes
+__export(require("./projectinfo.classes.git"));
+__export(require("./projectinfo.classes.npm"));
+__export(require("./projectinfo.classes.projectinfo"));
+// npm
 const projectinfo_classes_npm_1 = require("./projectinfo.classes.npm");
-var projectinfo_classes_npm_2 = require("./projectinfo.classes.npm");
-exports.ProjectinfoNpm = projectinfo_classes_npm_2.ProjectinfoNpm;
-exports.npm = function (cwdArg, optionsArg) {
-    return new projectinfo_classes_npm_1.ProjectinfoNpm(cwdArg, optionsArg);
-};
-//quick functions
-exports.getName = function (cwdArg) {
-    var localNpm = new projectinfo_classes_npm_1.ProjectinfoNpm(cwdArg);
-    if (localNpm.status === "ok") {
+// quick functions
+/**
+ * gets the name from package.json in a specified directory
+ */
+exports.getNpmNameForDir = function (cwdArg) {
+    let localNpm = new projectinfo_classes_npm_1.ProjectinfoNpm(cwdArg);
+    if (localNpm.status === 'ok') {
         return localNpm.name;
     }
 };
@@ -22,5 +27,5 @@ projectinfo.git = function(){
 projectinfo.mojo = function(){
 
 };
-*/ 
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi90cy9pbmRleC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQUEsMEJBQXVCO0FBR3ZCLEtBQUs7QUFDTCx1RUFBeUQ7QUFDekQscUVBQXlEO0FBQWpELG1EQUFBLGNBQWMsQ0FBQTtBQUNYLFFBQUEsR0FBRyxHQUFHLFVBQVMsTUFBTSxFQUFDLFVBQVU7SUFDdkMsTUFBTSxDQUFDLElBQUksd0NBQWMsQ0FBQyxNQUFNLEVBQUMsVUFBVSxDQUFDLENBQUM7QUFDakQsQ0FBQyxDQUFDO0FBRUYsaUJBQWlCO0FBQ04sUUFBQSxPQUFPLEdBQUcsVUFBUyxNQUFNO0lBQ2hDLElBQUksUUFBUSxHQUFHLElBQUksd0NBQWMsQ0FBQyxNQUFNLENBQUMsQ0FBQztJQUMxQyxFQUFFLENBQUMsQ0FBQyxRQUFRLENBQUMsTUFBTSxLQUFLLElBQUksQ0FBQyxDQUFBLENBQUM7UUFDMUIsTUFBTSxDQUFDLFFBQVEsQ0FBQyxJQUFJLENBQUM7SUFDekIsQ0FBQztBQUNMLENBQUMsQ0FBQztBQUVGOzs7Ozs7OztFQVFFIn0=
+*/
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi90cy9pbmRleC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7O0FBQUEsMEJBQXVCO0FBR3ZCLDJCQUEyQjtBQUMzQiwrQ0FBeUM7QUFDekMsK0NBQXlDO0FBQ3pDLHVEQUFpRDtBQUVqRCxNQUFNO0FBQ04sdUVBQTBEO0FBRTFELGtCQUFrQjtBQUVsQjs7R0FFRztBQUNRLFFBQUEsZ0JBQWdCLEdBQUcsVUFBUyxNQUFNO0lBQ3pDLElBQUksUUFBUSxHQUFHLElBQUksd0NBQWMsQ0FBQyxNQUFNLENBQUMsQ0FBQTtJQUN6QyxFQUFFLENBQUMsQ0FBQyxRQUFRLENBQUMsTUFBTSxLQUFLLElBQUksQ0FBQyxDQUFDLENBQUM7UUFDM0IsTUFBTSxDQUFDLFFBQVEsQ0FBQyxJQUFJLENBQUE7SUFDeEIsQ0FBQztBQUNMLENBQUMsQ0FBQTtBQUVEOzs7Ozs7OztFQVFFIn0=

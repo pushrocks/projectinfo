@@ -1,5 +1,6 @@
-import "typings-global";
+import 'typings-global';
 export declare class ProjectinfoNpm {
+    isNpm: boolean;
     packageJson: any;
     name: string;
     version: string;

@@ -1,40 +1,33 @@
 "use strict";
 require("typings-test");
-var projectinfo = require("../dist/index.js");
-var should = require("should");
-var path = require("path");
-var testBasePath = path.resolve(__dirname);
-describe("projectinfo", function () {
-    describe(".npm() return", function () {
-        var myNpm = projectinfo.npm(testBasePath, { gitAccessToken: "sometoken" });
-        it("should have .packageJson", function () {
-            myNpm.packageJson
-                .should.have.property("version", "1.0.0");
-            myNpm.packageJson
-                .should.have.property("name", "testpackage");
+const projectinfo = require("../dist/index");
+let should = require('should');
+let path = require('path');
+let testBasePath = path.resolve(__dirname);
+describe('projectinfo', function () {
+    describe('.npm() return', function () {
+        let myNpm = new projectinfo.ProjectinfoNpm(testBasePath, { gitAccessToken: 'sometoken' });
+        it('should have .packageJson', function () {
+            should(myNpm.packageJson).have.property('version', '1.0.0');
+            should(myNpm.packageJson).have.property('name', 'testpackage');
         });
-        it("should have .version", function () {
-            myNpm
-                .should.have.property("version", "1.0.0");
+        it('should have .version', function () {
+            should(myNpm).have.property('version', '1.0.0');
         });
-        it("should have .name", function () {
-            myNpm
-                .should.have.property("name", "testpackage");
+        it('should have .name', function () {
+            should(myNpm).have.property('name', 'testpackage');
         });
-        it("should have .license", function () {
-            myNpm
-                .should.have.property("license", "MIT");
+        it('should have .license', function () {
+            should(myNpm).have.property('license', 'MIT');
         });
-        it("should have .git", function () {
-            myNpm.git.httpsUrl
-                .should.equal("https://sometoken@github.com/someuser/somerepo.git");
+        it('should have .git', function () {
+            should(myNpm.git.httpsUrl).equal('https://sometoken@github.com/someuser/somerepo.git');
         });
     });
-    describe(".getName()", function () {
-        it("should return a name", function () {
-            projectinfo.getName(testBasePath)
-                .should.equal("testpackage");
+    describe('.getNpmNameForDir()', function () {
+        it('should return a name', function () {
+            should(projectinfo.getNpmNameForDir(testBasePath)).equal('testpackage');
         });
     });
 });
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidGVzdC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbInRlc3QudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUFBLHdCQUFzQjtBQUN0QixJQUFJLFdBQVcsR0FBRyxPQUFPLENBQUMsa0JBQWtCLENBQUMsQ0FBQztBQUM5QyxJQUFJLE1BQU0sR0FBRyxPQUFPLENBQUMsUUFBUSxDQUFDLENBQUM7QUFDL0IsSUFBSSxJQUFJLEdBQUcsT0FBTyxDQUFDLE1BQU0sQ0FBQyxDQUFDO0FBQzNCLElBQUksWUFBWSxHQUFHLElBQUksQ0FBQyxPQUFPLENBQUMsU0FBUyxDQUFDLENBQUM7QUFFM0MsUUFBUSxDQUFDLGFBQWEsRUFBQztJQUNuQixRQUFRLENBQUMsZUFBZSxFQUFDO1FBQ3JCLElBQUksS0FBSyxHQUFHLFdBQVcsQ0FBQyxHQUFHLENBQUMsWUFBWSxFQUFDLEVBQUMsY0FBYyxFQUFDLFdBQVcsRUFBQyxDQUFDLENBQUM7UUFDdkUsRUFBRSxDQUFDLDBCQUEwQixFQUFDO1lBQzFCLEtBQUssQ0FBQyxXQUFXO2lCQUNiLE1BQU0sQ0FBQyxJQUFJLENBQUMsUUFBUSxDQUFDLFNBQVMsRUFBQyxPQUFPLENBQUMsQ0FBQztZQUM1QyxLQUFLLENBQUMsV0FBVztpQkFDYixNQUFNLENBQUMsSUFBSSxDQUFDLFFBQVEsQ0FBQyxNQUFNLEVBQUMsYUFBYSxDQUFDLENBQUM7UUFDbkQsQ0FBQyxDQUFDLENBQUM7UUFFSCxFQUFFLENBQUMsc0JBQXNCLEVBQUM7WUFDdEIsS0FBSztpQkFDQSxNQUFNLENBQUMsSUFBSSxDQUFDLFFBQVEsQ0FBQyxTQUFTLEVBQUMsT0FBTyxDQUFDLENBQUE7UUFDaEQsQ0FBQyxDQUFDLENBQUM7UUFFSCxFQUFFLENBQUMsbUJBQW1CLEVBQUM7WUFDbkIsS0FBSztpQkFDQSxNQUFNLENBQUMsSUFBSSxDQUFDLFFBQVEsQ0FBQyxNQUFNLEVBQUMsYUFBYSxDQUFDLENBQUM7UUFDcEQsQ0FBQyxDQUFDLENBQUM7UUFFSCxFQUFFLENBQUMsc0JBQXNCLEVBQUM7WUFDdEIsS0FBSztpQkFDQSxNQUFNLENBQUMsSUFBSSxDQUFDLFFBQVEsQ0FBQyxTQUFTLEVBQUMsS0FBSyxDQUFDLENBQUM7UUFDL0MsQ0FBQyxDQUFDLENBQUM7UUFDSCxFQUFFLENBQUMsa0JBQWtCLEVBQUM7WUFDbEIsS0FBSyxDQUFDLEdBQUcsQ0FBQyxRQUFRO2lCQUNiLE1BQU0sQ0FBQyxLQUFLLENBQUMsb0RBQW9ELENBQUMsQ0FBQztRQUM1RSxDQUFDLENBQUMsQ0FBQztJQUVQLENBQUMsQ0FBQyxDQUFDO0lBRUgsUUFBUSxDQUFDLFlBQVksRUFBQztRQUNsQixFQUFFLENBQUMsc0JBQXNCLEVBQUM7WUFDdEIsV0FBVyxDQUFDLE9BQU8sQ0FBQyxZQUFZLENBQUM7aUJBQzVCLE1BQU0sQ0FBQyxLQUFLLENBQUMsYUFBYSxDQUFDLENBQUM7UUFDckMsQ0FBQyxDQUFDLENBQUM7SUFDUCxDQUFDLENBQUMsQ0FBQTtBQUNOLENBQUMsQ0FBQyxDQUFDIn0=
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidGVzdC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbInRlc3QudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUFBLHdCQUFxQjtBQUNyQiw2Q0FBNkM7QUFDN0MsSUFBSSxNQUFNLEdBQUcsT0FBTyxDQUFDLFFBQVEsQ0FBQyxDQUFBO0FBQzlCLElBQUksSUFBSSxHQUFHLE9BQU8sQ0FBQyxNQUFNLENBQUMsQ0FBQTtBQUMxQixJQUFJLFlBQVksR0FBRyxJQUFJLENBQUMsT0FBTyxDQUFDLFNBQVMsQ0FBQyxDQUFBO0FBRTFDLFFBQVEsQ0FBQyxhQUFhLEVBQUM7SUFDbkIsUUFBUSxDQUFDLGVBQWUsRUFBQztRQUNyQixJQUFJLEtBQUssR0FBRyxJQUFJLFdBQVcsQ0FBQyxjQUFjLENBQUMsWUFBWSxFQUFDLEVBQUMsY0FBYyxFQUFFLFdBQVcsRUFBQyxDQUFDLENBQUE7UUFDdEYsRUFBRSxDQUFDLDBCQUEwQixFQUFDO1lBQzFCLE1BQU0sQ0FBQyxLQUFLLENBQUMsV0FBVyxDQUFDLENBQUMsSUFBSSxDQUFDLFFBQVEsQ0FBQyxTQUFTLEVBQUMsT0FBTyxDQUFDLENBQUE7WUFDMUQsTUFBTSxDQUFDLEtBQUssQ0FBQyxXQUFXLENBQUMsQ0FBQyxJQUFJLENBQUMsUUFBUSxDQUFDLE1BQU0sRUFBQyxhQUFhLENBQUMsQ0FBQTtRQUNqRSxDQUFDLENBQUMsQ0FBQTtRQUVGLEVBQUUsQ0FBQyxzQkFBc0IsRUFBQztZQUN0QixNQUFNLENBQUMsS0FBSyxDQUFDLENBQUMsSUFBSSxDQUFDLFFBQVEsQ0FBQyxTQUFTLEVBQUMsT0FBTyxDQUFDLENBQUE7UUFDbEQsQ0FBQyxDQUFDLENBQUE7UUFFRixFQUFFLENBQUMsbUJBQW1CLEVBQUM7WUFDbkIsTUFBTSxDQUFDLEtBQUssQ0FBQyxDQUFDLElBQUksQ0FBQyxRQUFRLENBQUMsTUFBTSxFQUFDLGFBQWEsQ0FBQyxDQUFBO1FBQ3JELENBQUMsQ0FBQyxDQUFBO1FBRUYsRUFBRSxDQUFDLHNCQUFzQixFQUFDO1lBQ3RCLE1BQU0sQ0FBQyxLQUFLLENBQUMsQ0FBQyxJQUFJLENBQUMsUUFBUSxDQUFDLFNBQVMsRUFBQyxLQUFLLENBQUMsQ0FBQTtRQUNoRCxDQUFDLENBQUMsQ0FBQTtRQUNGLEVBQUUsQ0FBQyxrQkFBa0IsRUFBQztZQUNsQixNQUFNLENBQUMsS0FBSyxDQUFDLEdBQUcsQ0FBQyxRQUFRLENBQUMsQ0FBQyxLQUFLLENBQUMsb0RBQW9ELENBQUMsQ0FBQTtRQUMxRixDQUFDLENBQUMsQ0FBQTtJQUVOLENBQUMsQ0FBQyxDQUFBO0lBRUYsUUFBUSxDQUFDLHFCQUFxQixFQUFDO1FBQzNCLEVBQUUsQ0FBQyxzQkFBc0IsRUFBQztZQUN0QixNQUFNLENBQUMsV0FBVyxDQUFDLGdCQUFnQixDQUFDLFlBQVksQ0FBQyxDQUM1QyxDQUFDLEtBQUssQ0FBQyxhQUFhLENBQUMsQ0FBQTtRQUM5QixDQUFDLENBQUMsQ0FBQTtJQUNOLENBQUMsQ0FBQyxDQUFBO0FBQ04sQ0FBQyxDQUFDLENBQUEifQ==
