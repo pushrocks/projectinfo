@@ -1,4 +1,5 @@
 import 'typings-global';
+import plugins = require('./projectinfo.plugins');
 export declare class ProjectinfoNpm {
     isNpm: boolean;
     packageJson: any;
@@ -6,7 +7,7 @@ export declare class ProjectinfoNpm {
     version: string;
     status: string;
     license: string;
-    git: any;
+    git: plugins.smartstring.GitRepo;
     constructor(cwdArg: string, optionsArg?: {
         gitAccessToken?: string;
     });

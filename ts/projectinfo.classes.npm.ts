@@ -7,7 +7,7 @@ export class ProjectinfoNpm {
     version: string
     status: string
     license: string
-    git
+    git: plugins.smartstring.GitRepo
 
     constructor(cwdArg: string, optionsArg: { gitAccessToken?: string } = {}) {
         let resolvedCwd = plugins.path.resolve(cwdArg)
