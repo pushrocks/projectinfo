@@ -2,10 +2,10 @@
 gather information about projects. supports npm, git etc.
 
 ## Availabililty
-[![npm](https://push.rocks/assets/repo-button-npm.svg)](https://www.npmjs.com/package/projectinfo)
-[![git](https://push.rocks/assets/repo-button-git.svg)](https://GitLab.com/pushrocks/projectinfo)
-[![git](https://push.rocks/assets/repo-button-mirror.svg)](https://github.com/pushrocks/projectinfo)
-[![docs](https://push.rocks/assets/repo-button-docs.svg)](https://pushrocks.gitlab.io/projectinfo/)
+[![npm](https://pushrocks.gitlab.io/assets/repo-button-npm.svg)](https://www.npmjs.com/package/projectinfo)
+[![git](https://pushrocks.gitlab.io/assets/repo-button-git.svg)](https://GitLab.com/pushrocks/projectinfo)
+[![git](https://pushrocks.gitlab.io/assets/repo-button-mirror.svg)](https://github.com/pushrocks/projectinfo)
+[![docs](https://pushrocks.gitlab.io/assets/repo-button-docs.svg)](https://pushrocks.gitlab.io/projectinfo/)
 
 ## Status for master
 [![build status](https://GitLab.com/pushrocks/projectinfo/badges/master/build.svg)](https://GitLab.com/pushrocks/projectinfo/commits/master)
@@ -33,4 +33,9 @@ let gitRemotes = myProjectInfo.git.remotes // returns array with registered remo
 // for more info check out the module in your IDE with TypeScript intellisense enabled
 ```
 
-[![npm](https://push.rocks/assets/repo-header.svg)](https://push.rocks)
+For further information read the linked docs at the top of this README.
+
+> MIT licensed | **&copy;** [Lossless GmbH](https://lossless.gmbh)
+| By using this npm module you agree to our [privacy policy](https://lossless.gmbH/privacy.html)
+
+[![repo-footer](https://pushrocks.gitlab.io/assets/repo-footer.svg)](https://push.rocks)
