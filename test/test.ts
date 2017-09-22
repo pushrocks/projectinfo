@@ -1,5 +1,5 @@
 import { tap, expect } from 'tapbundle'
-import projectinfo = require('../dist/index')
+import projectinfo = require('../ts/index')
 
 let path = require('path')
 let testBasePath = path.resolve(__dirname)
