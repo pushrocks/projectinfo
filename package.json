@@ -37,5 +37,6 @@
     "@pushrocks/smartpath": "^4.0.1",
     "@pushrocks/smartpromise": "^2.0.5",
     "@pushrocks/smartstring": "^3.0.4"
-  }
+  },
+  "private": true
 }

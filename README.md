@@ -1,13 +1,16 @@
 # projectinfo
+
 gather information about projects. supports npm, git etc.
 
 ## Availabililty
+
 [![npm](https://pushrocks.gitlab.io/assets/repo-button-npm.svg)](https://www.npmjs.com/package/projectinfo)
 [![git](https://pushrocks.gitlab.io/assets/repo-button-git.svg)](https://GitLab.com/pushrocks/projectinfo)
 [![git](https://pushrocks.gitlab.io/assets/repo-button-mirror.svg)](https://github.com/pushrocks/projectinfo)
 [![docs](https://pushrocks.gitlab.io/assets/repo-button-docs.svg)](https://pushrocks.gitlab.io/projectinfo/)
 
 ## Status for master
+
 [![build status](https://GitLab.com/pushrocks/projectinfo/badges/master/build.svg)](https://GitLab.com/pushrocks/projectinfo/commits/master)
 [![coverage report](https://GitLab.com/pushrocks/projectinfo/badges/master/coverage.svg)](https://GitLab.com/pushrocks/projectinfo/commits/master)
 [![npm downloads per month](https://img.shields.io/npm/dm/projectinfo.svg)](https://www.npmjs.com/package/projectinfo)
@@ -19,16 +22,17 @@ gather information about projects. supports npm, git etc.
 [![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
 ## Usage
+
 Use TypeScript for best in class instellisense.
 
 ```javascript
-import { ProjectInfo } from 'projectinfo'
+import { ProjectInfo } from 'projectinfo';
 
-let myProjectInfo = new ProjectInfo('/some/path/to/proejct')
-let npmName = myProjectInfo.npm.name // returns npm name from package.json
-let npmVersion = myProjectInfo.npm.version // returns version from package.json
-let gitRepo = myProjectInfo.git.gitrepo // returns the name of the gitrepo
-let gitRemotes = myProjectInfo.git.remotes // returns array with registered remotes
+let myProjectInfo = new ProjectInfo('/some/path/to/proejct');
+let npmName = myProjectInfo.npm.name; // returns npm name from package.json
+let npmVersion = myProjectInfo.npm.version; // returns version from package.json
+let gitRepo = myProjectInfo.git.gitrepo; // returns the name of the gitrepo
+let gitRemotes = myProjectInfo.git.remotes; // returns array with registered remotes
 
 // for more info check out the module in your IDE with TypeScript intellisense enabled
 ```
@@ -36,6 +40,6 @@ let gitRemotes = myProjectInfo.git.remotes // returns array with registered remo
 For further information read the linked docs at the top of this README.
 
 > MIT licensed | **&copy;** [Lossless GmbH](https://lossless.gmbh)
-| By using this npm module you agree to our [privacy policy](https://lossless.gmbH/privacy.html)
+> | By using this npm module you agree to our [privacy policy](https://lossless.gmbH/privacy.html)
 
 [![repo-footer](https://pushrocks.gitlab.io/assets/repo-footer.svg)](https://push.rocks)
