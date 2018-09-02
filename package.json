@@ -1,5 +1,5 @@
 {
-  "name": "projectinfo",
+  "name": "@pushrocks/projectinfo",
   "version": "3.0.5",
   "description": "gather information about projects. supports npm, git etc.",
   "main": "dist/index.js",
