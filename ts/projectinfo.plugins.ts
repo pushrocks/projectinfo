@@ -1,6 +1,13 @@
-import 'typings-global'
-export import path = require('path')
-export import q = require('q')
-export import smartfile = require('smartfile')
-export import smartstring = require('smartstring')
-export import smartpath = require('smartpath')
+import * as path from 'path';
+import * as smartpromise from '@pushrocks/smartpromise';
+import * as smartfile from '@pushrocks/smartfile';
+import * as smartstring from '@pushrocks/smartstring';
+import * as smartpath from '@pushrocks/smartpath';
+
+export {
+  path,
+  smartpromise,
+  smartfile,
+  smartstring,
+  smartpath
+}

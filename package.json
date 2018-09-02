@@ -5,7 +5,8 @@
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "scripts": {
-    "test": "(npmts)"
+    "test": "(tstest test/)",
+    "build": "(tsbuild)"
   },
   "repository": {
     "type": "git",
@@ -25,14 +26,16 @@
   },
   "homepage": "https://gitlab.com/pushrocks/projectinfo#readme",
   "devDependencies": {
-    "tapbundle": "^1.1.1"
+    "@gitzone/tsbuild": "^2.0.22",
+    "@gitzone/tsrun": "^1.1.12",
+    "@gitzone/tstest": "^1.0.15",
+    "@pushrocks/tapbundle": "^3.0.5",
+    "@types/node": "^10.9.4"
   },
   "dependencies": {
-    "@types/q": "1.0.5",
-    "q": "^1.5.0",
-    "smartfile": "^4.2.26",
-    "smartpath": "^3.2.8",
-    "smartstring": "^2.0.24",
-    "typings-global": "^1.0.20"
+    "@pushrocks/smartfile": "^6.0.8",
+    "@pushrocks/smartpath": "^4.0.1",
+    "@pushrocks/smartpromise": "^2.0.5",
+    "@pushrocks/smartstring": "^3.0.4"
   }
 }

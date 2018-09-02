@@ -1,4 +1,3 @@
-import 'typings-global'
 import plugins = require('./projectinfo.plugins')
 
 // direct access to classes

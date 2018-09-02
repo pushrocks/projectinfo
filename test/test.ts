@@ -1,4 +1,4 @@
-import { tap, expect } from 'tapbundle'
+import { tap, expect } from '@pushrocks/tapbundle'
 import projectinfo = require('../ts/index')
 
 let path = require('path')

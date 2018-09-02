@@ -1,4 +1,3 @@
-import 'typings-global'
 import plugins = require('./projectinfo.plugins')
 export class ProjectinfoNpm {
     isNpm: boolean = false
