@@ -19,13 +19,3 @@ export let getNpmNameForDir = function(cwdArg) {
     return localNpm.name;
   }
 };
-
-/* TODO
-projectinfo.git = function(){
-
-};
-
-projectinfo.mojo = function(){
-
-};
-*/

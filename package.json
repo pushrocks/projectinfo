@@ -3,8 +3,8 @@
   "version": "4.0.2",
   "private": false,
   "description": "gather information about projects. supports npm, git etc.",
-  "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
+  "main": "dist_ts/index.js",
+  "typings": "dist_ts/index.d.ts",
   "scripts": {
     "test": "(tstest test/)",
     "build": "(tsbuild)"
@@ -27,16 +27,30 @@
   },
   "homepage": "https://gitlab.com/pushrocks/projectinfo#readme",
   "devDependencies": {
-    "@gitzone/tsbuild": "^2.0.22",
-    "@gitzone/tsrun": "^1.1.12",
-    "@gitzone/tstest": "^1.0.15",
-    "@pushrocks/tapbundle": "^3.0.5",
-    "@types/node": "^10.9.4"
+    "@gitzone/tsbuild": "^2.1.24",
+    "@gitzone/tsrun": "^1.2.12",
+    "@gitzone/tstest": "^1.0.33",
+    "@pushrocks/tapbundle": "^3.2.1",
+    "@types/node": "^14.0.6",
+    "tslint": "^6.1.2",
+    "tslint-config-prettier": "^1.18.0"
   },
   "dependencies": {
-    "@pushrocks/smartfile": "^6.0.8",
-    "@pushrocks/smartpath": "^4.0.1",
-    "@pushrocks/smartpromise": "^2.0.5",
-    "@pushrocks/smartstring": "^3.0.4"
-  }
+    "@pushrocks/smartfile": "^7.0.12",
+    "@pushrocks/smartpath": "^4.0.3",
+    "@pushrocks/smartpromise": "^3.0.6",
+    "@pushrocks/smartstring": "^3.0.18"
+  },
+  "files": [
+    "ts/**/*",
+    "ts_web/**/*",
+    "dist/**/*",
+    "dist_*/**/*",
+    "dist_ts/**/*",
+    "dist_ts_web/**/*",
+    "assets/**/*",
+    "cli.js",
+    "npmextra.json",
+    "readme.md"
+  ]
 }

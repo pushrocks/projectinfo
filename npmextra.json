@@ -1,10 +1,17 @@
 {
-    "npmts": {
-        "mode": "default",
-        "coverageTreshold": 80
-    },
-    "npmci": {
-        "npmGlobalTools": [],
-        "npmAccessLevel": "public"
+  "npmci": {
+    "npmGlobalTools": [],
+    "npmAccessLevel": "public"
+  },
+  "gitzone": {
+    "projectType": "npm",
+    "module": {
+      "githost": "gitlab.com",
+      "gitscope": "pushrocks",
+      "gitrepo": "projectinfo",
+      "shortDescription": "gather information about projects. supports npm, git etc.",
+      "npmPackagename": "@pushrocks/projectinfo",
+      "license": "MIT"
     }
+  }
 }
