@@ -1,6 +1,6 @@
 {
   "name": "@pushrocks/projectinfo",
-  "version": "4.0.4",
+  "version": "4.0.5",
   "private": false,
   "description": "gather information about projects. supports npm, git etc.",
   "main": "dist_ts/index.js",
